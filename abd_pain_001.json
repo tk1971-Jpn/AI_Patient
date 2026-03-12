@@ -1,0 +1,160 @@
+{
+  "case_id": "abd_pain_001",
+  "title": "救急外来：右上腹部痛（急性胆嚢炎・典型）",
+  "level": "medical_student",
+  "setting": "ED",
+  "patient_profile": {
+    "age": 42,
+    "sex": "F",
+    "chief_complaint": "みぞおち〜右上腹部が痛い",
+    "opening_statement": "すみません…昨日の夜からお腹が痛くて、今朝から特に右のあたりがつらいです。"
+  },
+  "initial_state": {
+    "vitals": { "T": 37.9, "HR": 96, "BP_sys": 118, "BP_dia": 72, "RR": 18, "SpO2": 98 },
+    "appearance": "痛みで顔をしかめるが会話は可能。冷汗なし。",
+    "triage_note": "歩いて来院。痛みは持続、波があると言う。"
+  },
+  "truth_internal": {
+    "primary_dx": "acute_cholecystitis",
+    "key_differentials": ["acute_cholangitis", "acute_pancreatitis", "peptic_ulcer", "appendicitis_atypical", "lower_lobe_pneumonia", "acute_coronary_syndrome"],
+    "do_not_disclose": ["diagnosis", "lab_results", "imaging_results"]
+  },
+  "disclosure_rules": {
+    "only_answer_if_asked": true,
+    "no_self_diagnosis": true,
+    "no_labs_imaging_unless_ordered": true,
+    "forced_safety_escalation": { "turn_if_no_redflag_check": 10 }
+  },
+  "info_bank": [
+    {
+      "id": "onset",
+      "tags": ["発症", "いつから", "開始", "経過"],
+      "patient_answer": "昨日の夜、夕食のあとから急に痛くなって、今朝から強くなりました。"
+    },
+    {
+      "id": "location",
+      "tags": ["部位", "どこ", "場所", "右上腹部", "みぞおち"],
+      "patient_answer": "最初はみぞおちでしたが、今は右の肋骨の下が一番痛いです。"
+    },
+    {
+      "id": "character",
+      "tags": ["性状", "どんな", "痛みの種類", "締め付け", "刺す", "波"],
+      "patient_answer": "締め付けられる感じで、ずっと痛いけど波もある気がします。"
+    },
+    {
+      "id": "severity",
+      "tags": ["痛みの強さ", "NRS", "0-10", "何点"],
+      "patient_answer": "今は10点中7〜8くらいです。"
+    },
+    {
+      "id": "radiation",
+      "tags": ["放散", "背中", "肩", "肩甲骨"],
+      "patient_answer": "右の背中というか、肩甲骨のあたりに響く感じがあります。"
+    },
+    {
+      "id": "aggravating",
+      "tags": ["増悪", "悪化", "食事", "脂っこい", "体位"],
+      "patient_answer": "昨日の夜は焼肉を食べました。食べたあとから痛くなった気がします。"
+    },
+    {
+      "id": "relieving",
+      "tags": ["軽くなる", "楽", "鎮痛薬", "薬"],
+      "patient_answer": "家で市販の痛み止めを飲みましたが、あまり効かなかったです。"
+    },
+    {
+      "id": "nausea_vomit",
+      "tags": ["吐き気", "嘔吐", "気持ち悪い"],
+      "patient_answer": "吐き気があって、朝に1回吐きました。"
+    },
+    {
+      "id": "fever_chills",
+      "tags": ["発熱", "熱", "悪寒", "寒気"],
+      "patient_answer": "少し熱っぽいです。寒気は強くないです。"
+    },
+    {
+      "id": "jaundice",
+      "tags": ["黄疸", "目が黄色", "尿", "便", "濃い尿", "白い便"],
+      "patient_answer": "目が黄色いと言われたことはありません。尿も便もいつも通りです。"
+    },
+    {
+      "id": "bowel",
+      "tags": ["下痢", "便秘", "便", "排便"],
+      "patient_answer": "下痢はなくて、便も普段通りです。"
+    },
+    {
+      "id": "urinary",
+      "tags": ["排尿", "尿の痛み", "頻尿"],
+      "patient_answer": "排尿の痛みや頻尿はありません。"
+    },
+    {
+      "id": "resp",
+      "tags": ["咳", "息苦しい", "呼吸", "胸"],
+      "patient_answer": "咳や息苦しさはないです。"
+    },
+    {
+      "id": "chest_pain",
+      "tags": ["胸痛", "胸の痛み", "圧迫感"],
+      "patient_answer": "胸の痛みや圧迫感はありません。"
+    },
+    {
+      "id": "pregnancy",
+      "tags": ["妊娠", "生理", "最終月経", "可能性"],
+      "patient_answer": "妊娠の可能性はないです。生理は先週来ました。"
+    },
+    {
+      "id": "pmh",
+      "tags": ["既往", "病歴", "持病"],
+      "patient_answer": "大きな病気はありません。"
+    },
+    {
+      "id": "psh",
+      "tags": ["手術", "手術歴"],
+      "patient_answer": "手術は受けたことがないです。"
+    },
+    {
+      "id": "med_allergy",
+      "tags": ["内服", "薬", "アレルギー"],
+      "patient_answer": "常用薬はありません。薬のアレルギーもありません。"
+    },
+    {
+      "id": "alcohol",
+      "tags": ["飲酒", "お酒"],
+      "patient_answer": "お酒はたまに少し飲む程度です。"
+    },
+    {
+      "id": "prior_similar",
+      "tags": ["同じ痛み", "以前", "繰り返し"],
+      "patient_answer": "似た痛みは何回かありましたが、ここまで強いのは初めてです。"
+    }
+  ],
+  "safety_escalation": {
+    "redflag_keywords": ["黄疸", "血圧", "冷汗", "意識", "反跳痛", "妊娠", "出血", "黒色便"],
+    "message_if_triggered": "すみません…だんだん気持ち悪くなってきて、少しふらつきます。"
+  },
+  "exam_findings": {
+    "only_if_requested": true,
+    "abd_exam": "腹部は平坦。右上腹部に圧痛。深呼吸で痛みが増悪し、Murphy徴候を示唆。反跳痛は明らかでない。",
+    "general": "意識清明。皮膚黄染なし。末梢冷感なし。"
+  },
+  "orders": {
+    "labs": {
+      "only_if_ordered": true,
+      "results": {
+        "CBC": "WBC 12,500 / Hb 13.2 / Plt 25.0万",
+        "CRP": "6.2",
+        "Chem": "Na 139 K 4.1 Cr 0.7",
+        "LFT": "AST 45 ALT 52 ALP 380 γGTP 120 T-Bil 0.9",
+        "Amylase": "65（正常）",
+        "Pregnancy": "陰性"
+      }
+    },
+    "imaging": {
+      "only_if_ordered": true,
+      "us_abd": "胆嚢腫大、胆石、壁肥厚。周囲に軽度液体貯留を示唆。",
+      "ct_abd": "胆嚢壁肥厚と周囲脂肪織濃度上昇。胆嚢頸部付近に結石を示唆。穿孔所見なし。"
+    }
+  },
+  "closing_task": {
+    "prompt": "①鑑別3つ（優先順位つき）②追加で必要な検査 ③初期対応 ④患者への説明（不安への共感も含む）をまとめてください。"
+  }
+}
