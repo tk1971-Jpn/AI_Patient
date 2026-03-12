@@ -1,1 +1,1 @@
-This is application of Stramlit based meedical interview training for medical students.  
+A Streamlit-based application for medical interview training of medical students.
